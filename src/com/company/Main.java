@@ -14,9 +14,13 @@ public class Main {
             Double e = sc.nextDouble();
 
 
-            System.out.println("Введите максимальное число элементов -");
+            System.out.println("Введите максимальное число элементов (целое положительное) -");
             int n = sc.nextInt();
             sc.close();
+            if (n < 0) {
+                System.out.println("Число не положительное");
+                return;
+            }
 
 
             double[] a = new double[n];
