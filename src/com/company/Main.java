@@ -1,6 +1,7 @@
 package com.company;
 
 import java.util.InputMismatchException;
+import java.util.Locale;
 import java.util.Scanner;
 
 
@@ -9,10 +10,10 @@ public class Main {
 
     public static void main(String[] args) {
         try {
-            Scanner sc = new Scanner(System.in);
+            Scanner sc = new Scanner(System.in).useLocale(Locale.US);
             System.out.println("Введите число -");
             Double e = sc.nextDouble();
-
+            //sc.useLocale(Locale.US);
 
             System.out.println("Введите максимальное число элементов (целое положительное) -");
             int n = sc.nextInt();
@@ -36,7 +37,7 @@ public class Main {
             }
         }
          catch (InputMismatchException e) {
-            System.out.println("Введено не корректное число");
+            System.out.println("Введено не корректное число/символ");
         }
 
 
